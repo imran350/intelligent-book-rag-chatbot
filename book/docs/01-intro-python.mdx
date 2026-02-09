@@ -1,0 +1,206 @@
+---
+sidebar_position: 1
+title: Introduction to Python
+slug: intro-python
+---
+
+import ChapterActions from '@site/src/components/ChapterActions';
+
+# Introduction to Python
+
+<ChapterActions 
+  chapterId="intro-python"
+  chapterTitle="Introduction to Python"
+  content={`
+Python is a powerful, versatile, and beginner-friendly programming language that has become essential for modern software development, data science, and artificial intelligence.
+
+## What is Python?
+
+Python is a high-level, interpreted programming language known for its simple syntax, versatility, large ecosystem, and strong community support.
+  `}
+/>
+
+Python is a powerful, versatile, and beginner-friendly programming language that has become essential for modern software development, data science, and artificial intelligence.
+
+## What is Python?
+
+Python is a high-level, interpreted programming language known for its:
+
+- **Simple Syntax**: Code is readable and resembles natural English
+- **Versatility**: Used for web development, data science, AI/ML, automation, and more
+- **Large Ecosystem**: Thousands of libraries and frameworks available
+- **Community Support**: Large and active community providing resources and help
+
+## Why Learn Python?
+
+### Growing Demand
+Python is one of the most in-demand programming languages in tech. Companies ranging from startups to Fortune 500 companies use Python for critical applications.
+
+### Easy Learning Curve
+Python's clean syntax makes it ideal for beginners. You can focus on learning programming concepts without getting bogged down in complex syntax.
+
+### Unlimited Possibilities
+Whether you want to build web applications, analyze data, create AI models, or automate tasks, Python has you covered.
+
+## Basic Concepts
+
+### Variables and Data Types
+
+```python
+# String
+name = "Alice"
+print(name)  # Output: Alice
+
+# Integer
+age = 25
+print(age)   # Output: 25
+
+# Float
+height = 5.7
+print(height)  # Output: 5.7
+
+# Boolean
+is_student = True
+print(is_student)  # Output: True
+```
+
+### Control Flow
+
+**If statements:**
+```python
+score = 85
+
+if score >= 90:
+    print("Grade: A")
+elif score >= 80:
+    print("Grade: B")
+else:
+    print("Grade: C")
+```
+
+**Loops:**
+```python
+# For loop
+for i in range(5):
+    print(i)  # Output: 0, 1, 2, 3, 4
+
+# While loop
+count = 0
+while count < 5:
+    print(count)
+    count += 1
+```
+
+### Functions
+
+```python
+def greet(name):
+    """Greet someone by name"""
+    return f"Hello, {name}!"
+
+print(greet("World"))  # Output: Hello, World!
+```
+
+### Lists and Dictionaries
+
+**Lists:**
+```python
+fruits = ["apple", "banana", "cherry"]
+print(fruits[0])  # Output: apple
+fruits.append("date")
+print(fruits)  # Output: ['apple', 'banana', 'cherry', 'date']
+```
+
+**Dictionaries:**
+```python
+person = {
+    "name": "Bob",
+    "age": 30,
+    "city": "New York"
+}
+print(person["name"])  # Output: Bob
+person["age"] = 31
+```
+
+## Installation and Setup
+
+### On Windows
+1. Download Python from [python.org](https://www.python.org)
+2. Run the installer
+3. Check "Add Python to PATH"
+4. Click "Install Now"
+
+### On macOS
+```bash
+# Using Homebrew
+brew install python3
+```
+
+### On Linux
+```bash
+# Ubuntu/Debian
+sudo apt-get install python3
+```
+
+## Your First Program
+
+Create a file called `hello.py`:
+
+```python
+print("Hello, Python!")
+
+name = input("What's your name? ")
+print(f"Welcome, {name}!")
+```
+
+Run it:
+```bash
+python hello.py
+```
+
+## Common Python Libraries
+
+| Library | Purpose |
+|---------|---------|
+| **NumPy** | Numerical computing |
+| **Pandas** | Data analysis |
+| **Matplotlib** | Data visualization |
+| **Django** | Web framework |
+| **Flask** | Lightweight web framework |
+| **TensorFlow** | Machine learning |
+| **Requests** | HTTP requests |
+| **BeautifulSoup** | Web scraping |
+
+## Best Practices
+
+1. **Use Meaningful Names**: Choose variable names that describe their purpose
+2. **Write Comments**: Explain complex logic with comments
+3. **Keep Functions Small**: Each function should do one thing well
+4. **DRY Principle**: Don't Repeat Yourself - reuse code when possible
+5. **Handle Errors**: Use try-except blocks for robust code
+
+## Next Steps
+
+- Practice writing small scripts
+- Learn about object-oriented programming (OOP)
+- Explore popular libraries for your area of interest
+- Build real projects to apply what you've learned
+- Join Python communities and forums
+
+## Tips for Success
+
+- **Code Every Day**: Regular practice is key to learning
+- **Read Others' Code**: Learn from existing projects on GitHub
+- **Debug Systematically**: Use print statements and debuggers
+- **Break Problems Down**: Divide complex problems into smaller parts
+- **Ask for Help**: Use Stack Overflow and community forums
+
+## Summary
+
+Python is a fantastic language to start your programming journey. With its simple syntax, powerful capabilities, and vast ecosystem, you can build virtually anything. The key is consistent practice and learning from real-world projects.
+
+---
+
+**Next Chapter**: Variables and Data Types
+
+**Questions about Python?** Ask the AI Assistant on the right! 💬

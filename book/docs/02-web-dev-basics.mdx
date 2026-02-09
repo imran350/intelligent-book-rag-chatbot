@@ -1,0 +1,319 @@
+---
+sidebar_position: 2
+title: Web Development Basics
+slug: web-dev-basics
+---
+
+import ChapterActions from '@site/src/components/ChapterActions';
+
+# Web Development Basics
+
+<ChapterActions 
+  chapterId="web-dev-basics"
+  chapterTitle="Web Development Basics"
+  content={`
+Web development is the art and science of building applications and websites that run in web browsers. It combines HTML for structure, CSS for styling, and JavaScript for interactivity.
+  `}
+/>
+
+Web development is the art and science of building applications and websites that run in web browsers. It combines design, programming, and user experience to create interactive digital products.
+
+## What is Web Development?
+
+Web development typically involves three main technologies:
+
+1. **HTML** (HyperText Markup Language): Structure
+2. **CSS** (Cascading Style Sheets): Styling and layout
+3. **JavaScript**: Interactivity and logic
+
+## The Three Pillars
+
+### HTML: Building the Structure
+
+HTML provides the structural foundation of web pages using semantic elements:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My First Page</title>
+</head>
+<body>
+    <h1>Welcome to Web Development</h1>
+    <p>This is a paragraph of text.</p>
+    <a href="https://example.com">Click here</a>
+</body>
+</html>
+```
+
+**Common HTML Elements:**
+- `<h1>` to `<h6>`: Headings
+- `<p>`: Paragraphs
+- `<ul>` / `<ol>`: Lists
+- `<a>`: Links
+- `<img>`: Images
+- `<form>`: User input forms
+- `<div>`: Container/Section
+
+### CSS: Making It Beautiful
+
+CSS is used to style and layout web pages:
+
+```css
+/* Selectors and properties */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #333;
+    font-size: 2em;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5em;
+    }
+}
+```
+
+### JavaScript: Adding Interactivity
+
+JavaScript makes web pages interactive and dynamic:
+
+```javascript
+// DOM Manipulation
+const button = document.getElementById('myButton');
+button.addEventListener('click', () => {
+    alert('Button clicked!');
+});
+
+// Fetch API for asynchronous requests
+fetch('https://api.example.com/data')
+    .then(response => response.json())
+    .then(data => {
+        console.log('Data:', data);
+        updatePage(data);
+    })
+    .catch(error => console.error('Error:', error));
+
+// Function to update the page
+function updatePage(data) {
+    const container = document.getElementById('content');
+    container.innerHTML = `<p>${data.message}</p>`;
+}
+```
+
+## Frontend vs Backend
+
+### Frontend (Client-Side)
+- What users see and interact with
+- Technologies: HTML, CSS, JavaScript, React, Vue, Angular
+- Runs in the browser
+- Focuses on user experience
+
+### Backend (Server-Side)
+- Server-side logic and database management
+- Technologies: Python (FastAPI, Django), Node.js, Java, Go, etc.
+- Runs on servers
+- Handles data processing and security
+
+## Web Development Workflow
+
+### 1. Planning and Design
+- Define project requirements
+- Create wireframes and mockups
+- Plan information architecture
+
+### 2. Frontend Development
+- Write semantic HTML
+- Style with CSS
+- Add interactivity with JavaScript
+
+### 3. Backend Development
+- Create APIs and endpoints
+- Set up databases
+- Implement business logic
+
+### 4. Integration
+- Connect frontend to backend APIs
+- Test all features
+- Ensure performance
+
+### 5. Deployment
+- Choose hosting platform
+- Deploy frontend and backend
+- Monitor and maintain
+
+## Modern Web Development Tools
+
+### Package Managers
+- **npm**: JavaScript package manager
+- **pip**: Python package manager
+
+### Version Control
+- **Git**: Track code changes
+- **GitHub**: Collaborate and host repositories
+
+### Build Tools
+- **Webpack**: Module bundler
+- **Vite**: Fast frontend build tool
+- **Babel**: JavaScript transpiler
+
+### Testing
+- **Jest**: JavaScript testing framework
+- **Pytest**: Python testing framework
+- **Selenium**: Browser automation
+
+### Deployment Platforms
+- **GitHub Pages**: Static site hosting
+- **Vercel**: JAMstack deployment
+- **Heroku**: Application hosting
+- **AWS**: Cloud services
+- **Docker**: Containerization
+
+## Progressive Enhancement
+
+Build web applications with layers:
+
+1. **HTML**: Core content works without JavaScript
+2. **CSS**: Page looks good with styles
+3. **JavaScript**: Enhanced features and interactivity
+
+## Responsive Web Design
+
+Create websites that work on all devices:
+
+```css
+/* Mobile-first approach */
+body {
+    font-size: 16px;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+```
+
+## Web Accessibility (a11y)
+
+Make websites usable for everyone:
+
+```html
+<!-- Use semantic HTML -->
+<header>
+    <nav><!-- navigation --></nav>
+</header>
+<main>
+    <article>
+        <h1>Article Title</h1>
+        <p>Content...</p>
+    </article>
+</main>
+<footer>
+    <!-- footer content -->
+</footer>
+
+<!-- Use alt text for images -->
+<img src="photo.jpg" alt="Description of photo">
+
+<!-- Use proper form labels -->
+<label for="email">Email:</label>
+<input type="email" id="email" name="email">
+```
+
+## Performance Optimization
+
+### Key Metrics
+- **LCP** (Largest Contentful Paint): < 2.5s
+- **FID** (First Input Delay): < 100ms
+- **CLS** (Cumulative Layout Shift): < 0.1
+
+### Optimization Techniques
+1. Minimize and compress assets
+2. Use lazy loading for images
+3. Cache static content
+4. Minimize JavaScript bundles
+5. Optimize server response time
+6. Use CDN for global distribution
+
+## Popular Web Development Frameworks
+
+### Frontend
+- **React**: Component-based library by Meta
+- **Vue.js**: Progressive framework
+- **Angular**: Full-featured framework
+- **Svelte**: Compiler-based framework
+- **Next.js**: React framework with SSR
+
+### Backend
+- **FastAPI** (Python): Modern, fast API framework
+- **Django** (Python): Full-featured web framework
+- **Express** (Node.js): Minimal web framework
+- **NestJS** (TypeScript): Progressive Node.js framework
+- **Go**: High-performance backend language
+
+## Security Best Practices
+
+1. **Input Validation**: Always validate user input
+2. **XSS Prevention**: Escape user-generated content
+3. **CSRF Protection**: Use tokens for state-changing operations
+4. **SQL Injection Prevention**: Use parameterized queries
+5. **HTTPS**: Always use encrypted connections
+6. **Authentication**: Implement secure login systems
+7. **Authorization**: Verify user permissions
+8. **Keep Dependencies Updated**: Regular security updates
+
+## Learning Path
+
+1. **Week 1**: HTML basics and structure
+2. **Week 2**: CSS styling and layouts
+3. **Week 3**: JavaScript fundamentals
+4. **Week 4**: DOM manipulation and events
+5. **Week 5**: Fetch API and asynchronous programming
+6. **Week 6**: Pick a framework (React, Vue, etc.)
+7. **Week 7**: Backend basics
+8. **Week 8**: Database integration
+9. **Week 9**: Full-stack project
+
+## Summary
+
+Web development is a vast and exciting field with many specializations. The key is:
+
+- **Master fundamentals**: HTML, CSS, JavaScript
+- **Learn frameworks**: Accelerate development
+- **Practice continuously**: Build real projects
+- **Stay updated**: Technology evolves quickly
+- **Focus on UX**: User experience matters most
+
+---
+
+**Next Chapter**: Advanced JavaScript Concepts
+
+**Have questions about web development?** Ask the AI Assistant! 🌐
